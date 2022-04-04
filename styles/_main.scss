@@ -1,0 +1,240 @@
+// INDEX PAGE
+
+// Learn new techniques
+.techniques-section,
+.connect-section {
+  h2 {
+    color: $secondaryColor;
+    font-size: 2.15rem;
+    line-height: 2.9rem;
+    letter-spacing: 2.7px;
+  }
+}
+
+.techniques-section {
+  padding-top: 150px;
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    margin-top: 10px;
+  }
+
+  button {
+    @include buttonStyles($secondaryColor, $secondaryTextColor);
+  }
+}
+
+.techniques-text-container,
+.techniques-img-container {
+  padding: 50px 0;
+}
+
+.techniques-text-container {
+  width: calc(70% - 50px);
+}
+
+.techniques-img-container {
+  width: 30%;
+  align-self: center;
+}
+
+// Gallery aside
+.gallery,
+.discover-section {
+  background: $secondaryColor;
+  color: $secondaryTextColor;
+}
+
+.gallery-container {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: calc(100% / 3 - 25px);
+  }
+}
+
+// Discover online markets, New locations
+.discover-section,
+.search-section {
+  h3 {
+    font-size: 2rem;
+    line-height: 2.9rem;
+    letter-spacing: 2.5px;
+  }
+}
+
+.discover-section {
+  padding: 30px 0;
+
+  h3 {
+    color: $secondaryTextColor;
+  }
+
+  button {
+    @include buttonStyles($primaryColor, $primaryTextColor);
+    margin-top: 20px;
+  }
+}
+
+.discover-container,
+.locations-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discover-box,
+.locations-box {
+  width: calc(50% - 80px);
+}
+
+.discover-text {
+  padding-right: $gutterWide;
+}
+
+.locations-text {
+  padding-left: $gutterWide;
+}
+
+.locations-img-container {
+  order: 1;
+  position: relative;
+  bottom: -70px;
+}
+
+.discover-img-container {
+  position: relative;
+  top: -70px;
+}
+
+// Connect section (Upcoming Events, Community, etc.)
+.connect-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.connect-container {
+  width: calc(50% - 8px);
+  display: flex;
+}
+
+// Icon styles
+.connect-icon {
+  min-width: 60px;
+  position: relative;
+  top: 12px;
+  margin-right: 20px;
+
+  &::after {
+    content: "";
+    background: $accentColor;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -12px;
+    z-index: -1;
+  }
+
+  i {
+    font-size: 1.5rem;
+    color: $secondaryTextColor;
+    position: relative;
+    top: 3px;
+    margin-left: 12px;
+  }
+}
+
+// Centering icons
+.fa-calendar-check {
+  left: 5px;
+}
+
+.fa-users {
+  left: -1px;
+}
+
+.fa-file {
+  left: 7px;
+}
+
+.fa-phone {
+  left: 3px;
+}
+
+// Search styles
+.search-section {
+  text-align: center;
+  padding: 90px 0 120px;
+
+  h3 {
+    color: $secondaryColor;
+  }
+
+  button {
+    @include buttonStyles($secondaryColor, $secondaryTextColor);
+    margin-top: 20px;
+  }
+}
+
+// CONTACT PAGE
+.contact-section {
+  display: flex;
+  padding: 0;
+}
+
+.contact-form {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  padding: 40px;
+  margin-left: $gutterWide;
+  @include formStyles($secondaryColor, $secondaryTextColor);
+
+  input[id="name"],
+  input[id="email"],
+  textarea {
+    @include inputStyles(
+      $secondaryColor,
+      $secondaryTextColor,
+      $secondaryTextColor
+    );
+
+    &:focus {
+      border: 2px solid #fff;
+    }
+  }
+
+  button {
+    @include buttonStyles($primaryColor, $primaryTextColor);
+  }
+}
+
+.contact-info {
+  padding: 100px 0 0 100px;
+  padding-right: $gutterWide;
+
+  p:not(:first-of-type) {
+    margin: 0;
+  }
+}
+
+.contact-social-icons {
+  a {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-right: 10px;
+    transition: 0.3s all;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+}

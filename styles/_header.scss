@@ -1,0 +1,115 @@
+.header-top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.logo {
+  font-family: $secondaryFont;
+  color: $primaryTextColor;
+  font-size: 1.5rem;
+  line-height: 24px;
+  letter-spacing: 1.7px;
+  margin-top: 0;
+}
+
+.header-nav {
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+
+    a {
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 29px;
+      letter-spacing: 1.4px;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $primaryFont;
+      color: $secondaryColor;
+      display: block;
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid $accentColor;
+      }
+    }
+  }
+}
+
+.header-home {
+  background-image: url(../assets/header-home.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  position: relative;
+
+  h1 {
+    font-size: 2.9rem;
+    line-height: 3.4rem;
+    width: 650px;
+  }
+}
+
+.home-box-img {
+  width: 60%;
+  position: absolute;
+  left: 0;
+  bottom: -150px;
+}
+
+.header-blog,
+.header-contact,
+.header-about {
+  background-size: cover;
+  background-position: right;
+  height: 60vh;
+}
+
+.header-blog {
+  background-image: url(../assets/blog-header.jpg);
+}
+
+.header-about {
+  background-image: url(../assets/header-about.jpg);
+}
+
+.header-contact {
+  background-image: url(../assets/contact-header.jpg);
+}
+
+// SLIDE-OUT NAVIGATION
+header {
+  label {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+    display: none;
+  }
+
+  input[id="menu-toggle"] {
+    display: none;
+  }
+}
+
+// Menu toggle icon
+.fa-bars {
+  color: #fff;
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 45px;
+    width: 45px;
+    background: $accentColor;
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    z-index: -1;
+  }
+}

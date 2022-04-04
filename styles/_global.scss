@@ -1,0 +1,105 @@
+// GLOBAL STYLES
+// * { border: 1px dashed deeppink; }
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: $primaryFont;
+  font-size: $bodyFontSize;
+  color: $primaryTextColor;
+  line-height: 1.4rem;
+  letter-spacing: 2px;
+  background: $primaryColor;
+}
+
+.outer-wrapper {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: calc(1600px * 0.85);
+  width: 85%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 60px 0;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $secondaryFont;
+  margin: 0;
+}
+
+h1 {
+  color: $secondaryColor;
+  margin-top: 50px;
+  font-size: 3.4rem;
+  line-height: 3.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: $secondaryColor;
+}
+
+button {
+  padding: 10px 40px;
+}
+
+// Image box-shadows
+.right-shadow {
+  box-shadow: 20px 20px 0px $accentColor;
+}
+
+.left-shadow {
+  box-shadow: -20px 20px 0px $accentColor;
+}
+
+// Forms
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  input[id="name"],
+  input[id="email"] {
+    width: calc(50% - 20px);
+    border: 0;
+  }
+
+  textarea,
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  input[id="name"],
+  input[id="email"],
+  textarea {
+    padding: 20px;
+  }
+
+  textarea {
+    margin: 30px 0;
+    resize: none;
+    border: 2px solid $accentColor;
+  }
+}

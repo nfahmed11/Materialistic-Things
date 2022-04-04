@@ -1,0 +1,58 @@
+// VARIABLES
+
+// Colours
+$primaryColor: #e0ccfb;
+$secondaryColor: #471a5c;
+$tertiaryColor: #161515; //second black
+$accentColor: #720cc0;
+
+// Text colours
+$primaryTextColor: #1e1713; // first black
+$secondaryTextColor: #fff;
+
+// Font
+$primaryFont: "Lato", sans-serif;
+$secondaryFont: "Pacifico", cursive;
+$bodyFontSize: 1rem;
+
+// Gutter (margins) based on wrapper of 85% & 92% (mobile)
+$gutter: 7.5vw;
+$gutterWide: calc(1600px * 0.075);
+$gutterSmall: 4vw;
+
+// MIXINS
+
+// Form styles
+@mixin formStyles($formColor, $formTextColor) {
+  background: $formColor;
+  color: $formTextColor;
+}
+
+@mixin inputStyles($inputColor, $inputTextColor, $placeholderColor) {
+  background: $inputColor;
+  color: $inputTextColor;
+  border-bottom: 2px solid $accentColor;
+
+  &::placeholder {
+    color: $placeholderColor;
+    opacity: 0.7;
+  }
+}
+
+// Button styles
+@mixin buttonStyles($bgColor, $textColor) {
+  background: $bgColor;
+  color: $textColor;
+  font-family: $secondaryFont;
+  text-transform: lowercase;
+  text-align: center;
+  border: 2px solid $bgColor;
+  transition: 0.3s all;
+
+  &:hover,
+  &:focus {
+    background: $accentColor;
+    color: $secondaryTextColor;
+    border: 2px solid $secondaryTextColor;
+  }
+}

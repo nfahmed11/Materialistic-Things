@@ -1,0 +1,135 @@
+// BLOG STYLES
+
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-section {
+  width: 65%;
+}
+
+.blog-aside {
+  width: 25%;
+}
+
+.blog-text-container,
+.comments-section,
+.comment-form-section {
+  padding: 0 50px 0 $gutterWide;
+}
+
+// Blog article main body
+.blog-article,
+.blog-aside-container {
+  background: $secondaryColor;
+  color: $secondaryTextColor;
+}
+
+.blog-article {
+  border-right: 10px solid $accentColor;
+  border-bottom: 10px solid $accentColor;
+}
+
+.blog-img-container img {
+  width: calc(100% - 10px);
+  position: relative;
+  top: -160px;
+}
+
+.blog-text-container {
+  margin-top: -90px;
+  padding-bottom: 60px;
+
+  h2 {
+    font-size: 2rem;
+    letter-spacing: 4.3px;
+  }
+}
+
+.blog-date {
+  color: $primaryColor;
+}
+
+// Aside styles
+.blog-aside-container {
+  margin-top: 120px;
+}
+
+.blog-aside-text-container {
+  padding: 0 30px 5px 20px;
+}
+
+.blog-aside-text-box {
+  margin-bottom: 30px;
+
+  h4 {
+    font-size: 1.75rem;
+    letter-spacing: 2.9px;
+  }
+
+  ul {
+    padding-left: 20px;
+    padding-top: 20px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.blog-aside-img-container {
+  width: calc(100% - 20px);
+  position: relative;
+  right: -20px;
+  top: -20px;
+}
+
+// Comments section
+.comments-section {
+  margin-top: 50px;
+
+  h3 {
+    font-size: 2rem;
+    letter-spacing: 4.3px;
+    color: $tertiaryColor;
+  }
+}
+
+.comment-date {
+  color: $secondaryColor;
+  font-weight: bold;
+}
+
+.blog-comment {
+  display: flex;
+  margin: 50px 0;
+}
+
+.commenter-img {
+  min-width: 20%;
+  margin-right: 30px;
+}
+
+.comment-text-container p {
+  margin: 0;
+}
+
+// Comment form
+.comment-form {
+  @include formStyles($primaryColor, $primaryTextColor);
+
+  input[id="name"],
+  input[id="email"],
+  textarea {
+    @include inputStyles($primaryColor, $primaryTextColor, $secondaryColor);
+
+    &:focus {
+      border: 2px solid $secondaryColor;
+    }
+  }
+
+  button {
+    @include buttonStyles($secondaryColor, $secondaryTextColor);
+  }
+}
